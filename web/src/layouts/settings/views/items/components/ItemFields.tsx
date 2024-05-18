@@ -42,12 +42,12 @@ const ItemFields: React.FC = () => {
                 placeholder="Item"
                 onChange={(e) => handleChange(e, index)}
               />
-              <Tooltip label="Item options">
+              <Tooltip label="Opções de item">
                 <ActionIcon color="blue.4" variant="transparent" onClick={() => setModal({ opened: true, index })}>
                   <TbSettings size={24} />
                 </ActionIcon>
               </Tooltip>
-              <Tooltip label="Delete row">
+              <Tooltip label="Deletar linha">
                 <ActionIcon color="red.4" variant="transparent" onClick={() => handleRowDelete(index)}>
                   <TbTrash size={24} />
                 </ActionIcon>
@@ -60,7 +60,7 @@ const ItemFields: React.FC = () => {
         opened={modal.opened}
         onClose={() => setModal({ ...modal, opened: false })}
         transition="fade"
-        title="Item options"
+        title="Opções de item"
         centered
         size="xs"
         withCloseButton={false}

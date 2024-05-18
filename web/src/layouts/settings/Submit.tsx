@@ -87,9 +87,9 @@ const Submit: React.FC = () => {
   return (
     <Center>
       <Button color="blue" uppercase onClick={() => handleSubmit()} fullWidth>
-        Confirm door
+        Salvar Porta
       </Button>
-      <Tooltip label={!clipboard ? 'No door settings copied' : 'Apply copied settings'} withArrow arrowSize={10}>
+      <Tooltip label={!clipboard ? 'Nenhuma configuração de porta copiada' : 'Aplicar configurações copiadas'} withArrow arrowSize={10}>
         <ActionIcon
           variant="outline"
           disabled={!clipboard}
@@ -120,7 +120,7 @@ const Submit: React.FC = () => {
               },
               true
             );
-            fetchNui('notify', 'Settings applied');
+            fetchNui('notify', 'Configurações aplicadas');
           }}
         >
           <HiOutlineClipboardCheck size={20} />
@@ -135,7 +135,7 @@ const Submit: React.FC = () => {
         disabled={!useStore.getState().id}
         onClick={() =>
           openConfirmModal({
-            title: 'Confirm deletion',
+            title: 'Confirmar exclusão',
             centered: true,
             withCloseButton: false,
             children: (
@@ -144,7 +144,7 @@ const Submit: React.FC = () => {
                 <Text component="span" weight={700}>{` ${useStore.getState().name}`}</Text>?
               </Text>
             ),
-            labels: { confirm: 'Confirm', cancel: 'Cancel' },
+            labels: { confirm: 'Confirmar', cancel: 'Cancelar' },
             confirmProps: { color: 'red' },
             onConfirm: () => {
               fetchNui('deleteDoor', useStore.getState().id);

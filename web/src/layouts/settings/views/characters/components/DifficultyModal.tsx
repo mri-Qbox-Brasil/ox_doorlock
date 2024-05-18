@@ -65,16 +65,16 @@ const DifficultyModal: React.FC<Props> = ({ selectData, setModal, modal }) => {
       <Stack>
         <Select
           data={selectData}
-          placeholder="Difficulty"
+          placeholder="Dificuldade"
           {...form.getInputProps('select')}
           value={select}
           onChange={setSelect}
           required
         />
         <NumberInput
-          label="Area size"
+          label="Tamanho da área"
           defaultValue={typeof lockpickData === 'object' ? lockpickData.areaSize : null}
-          description="Skill check area size in degrees"
+          description="Tamanho da área de verificação de habilidade em graus (máx 360)"
           disabled={select !== 'custom'}
           max={360}
           hideControls
@@ -82,8 +82,8 @@ const DifficultyModal: React.FC<Props> = ({ selectData, setModal, modal }) => {
           {...form.getInputProps('areaSize')}
         />
         <NumberInput
-          label="Speed multiplier"
-          description="Number the indicator speed will be multiplied by"
+          label="Multiplicador de velocidade"
+          description="Número que a velocidade do indicador será multiplicada"
           disabled={select !== 'custom'}
           defaultValue={typeof lockpickData === 'object' ? lockpickData.speedMultiplier : null}
           hideControls
@@ -92,7 +92,7 @@ const DifficultyModal: React.FC<Props> = ({ selectData, setModal, modal }) => {
           {...form.getInputProps('speedMultiplier')}
         />
         <Button type="submit" uppercase variant="light">
-          Confirm
+          Confirmar
         </Button>
       </Stack>
     </form>

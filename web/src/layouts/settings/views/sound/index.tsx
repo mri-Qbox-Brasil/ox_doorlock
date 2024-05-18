@@ -12,20 +12,20 @@ const Sound: React.FC = () => {
     <Stack>
       <Select
         data={sounds}
-        label="Lock sound"
+        label="Som ao trancar a porta"
         value={lockSound || ''}
         searchable
         clearable
-        nothingFound="No such sound"
+        nothingFound="Esse som não existe"
         onChange={(e) => setLockSound(e)}
       />
       <Select
         data={sounds}
-        label="Unlock sound"
+        label="Som ao destrancar a porta"
         value={unlockSound || ''}
         searchable
         clearable
-        nothingFound="No such sound"
+        nothingFound="Esse som não existe"
         onChange={(e) => setUnlockSound(e)}
       />
     </Stack>

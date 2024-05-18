@@ -33,29 +33,29 @@ const Inputs: React.FC = () => {
   return (
     <>
       <Grid columns={2} sx={{ fontSize: 16 }}>
-        <Input label="Door name" type="text" value={doorName || ''} setValue={(value: string) => setDoorName(value)} />
-        <Input label="Passcode" type="text" value={passcode || ''} setValue={(value: string) => setPasscode(value)} />
+        <Input label="Nome da porta" type="text" value={doorName || ''} setValue={(value: string) => setDoorName(value)} />
+        <Input label="Senha" type="text" value={passcode || ''} setValue={(value: string) => setPasscode(value)} />
         <Input
-          label="Autolock Interval"
+          label="Auto-trancamento"
           type="number"
           value={autolockInterval || 0}
           setValue={(value: number) => setAutolockInterval(value)}
-          infoCircle="Time in seconds after which the door will be locked"
+          infoCircle="Tempo em segundos após o qual a porta será trancada"
         />
         <Input
-          label="Interact Distance"
+          label="Distância de interação"
           type="number"
           value={interactDistance || 0}
           setValue={(value: number) => setInteractDistance(value)}
-          infoCircle="Controls the distance from which the player can interact with the door"
+          infoCircle="Controla a distância na qual o jogador pode interagir com a porta"
         />
         <Input
-          label="Door Rate"
+          label="Velocidade de trancamento"
           type="number"
           span={2}
           value={doorRate || 0}
           setValue={(value: number) => setDoorRate(value)}
-          infoCircle="Speed the automatic door will move at"
+          infoCircle="Velocidade à qual a porta será trancada automaticamente"
         />
       </Grid>
     </>

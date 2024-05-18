@@ -29,17 +29,17 @@ const GroupFields: React.FC = () => {
         >
           <TextInput
             sx={{ width: '100%' }}
-            placeholder="Group"
+            placeholder="Grupo (police, ballas, etc.)"
             value={field.name as string}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e.target.value, index, 'name')}
           />
           <NumberInput
             sx={{ width: '100%' }}
-            placeholder="Grade"
+            placeholder="Cargo (0, 1, 2, 3, etc.)"
             value={field.grade as number}
             onChange={(e) => handleChange(e, index, 'grade')}
           />
-          <Tooltip label="Delete row">
+          <Tooltip label="Deletar linha">
             <ActionIcon color="red.4" variant="transparent" onClick={() => handleRowDelete(index)}>
               <TbTrash size={24} />
             </ActionIcon>

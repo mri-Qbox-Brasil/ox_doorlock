@@ -29,11 +29,11 @@ const CharacterFields: React.FC = () => {
         >
           <TextInput
             sx={{ width: '100%' }}
-            placeholder="Character Id"
+            placeholder="Citizen ID"
             value={field as string}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e.target.value, index)}
           />
-          <Tooltip label="Delete row">
+          <Tooltip label="Deletar linha">
             <ActionIcon color="red.4" variant="transparent" onClick={() => handleRowDelete(index)}>
               <TbTrash size={24} />
             </ActionIcon>

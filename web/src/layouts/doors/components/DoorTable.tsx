@@ -33,14 +33,14 @@ const DoorTable: React.FC = () => {
       },
       {
         id: 'name',
-        header: 'Name',
+        header: 'Nome',
         accessorKey: 'name',
         cell: (info) => info.getValue(),
         enableHiding: false,
       },
       {
         id: 'zone',
-        header: 'Zone',
+        header: 'Zona',
         accessorKey: 'zone',
         cell: (info) => info.getValue(),
         enableHiding: false,
@@ -120,7 +120,7 @@ const DoorTable: React.FC = () => {
         <Center sx={{ height: '100%' }}>
           <Stack align="center">
             <TbSearch size={48} />
-            <Text size="lg">No results found</Text>
+            <Text size="lg">Nenhum resultado encontrado</Text>
           </Stack>
         </Center>
       )}

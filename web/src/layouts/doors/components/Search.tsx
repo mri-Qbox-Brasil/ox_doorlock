@@ -17,7 +17,7 @@ const Searchbar: React.FC = () => {
       <TextInput
         sx={{ flex: '1 1 auto', padding: 2 }}
         icon={<TbSearch size={20} />}
-        placeholder="Search"
+        placeholder="Buscar"
         value={search.value ?? ''}
         onChange={(e) => search.setValue(e.target.value)}
       />

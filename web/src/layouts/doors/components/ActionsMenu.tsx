@@ -19,7 +19,7 @@ const ActionsMenu: React.FC<{ data: CellContext<DoorColumn, unknown> }> = ({ dat
   return (
     <Menu position="right-start" width={200}>
       <Menu.Target>
-        <Tooltip label="Door actions">
+        <Tooltip label="Ações da Porta">
           <ActionIcon color="blue.4" variant="transparent">
             <TbDots size={24} />
           </ActionIcon>
@@ -34,16 +34,16 @@ const ActionsMenu: React.FC<{ data: CellContext<DoorColumn, unknown> }> = ({ dat
             navigate('/settings/general');
           }}
         >
-          Settings
+          Configurações
         </Menu.Item>
         <Menu.Item
           icon={<HiOutlineClipboardCopy size={18} />}
           onClick={() => {
             setClipboard(convertData(data.row.original));
-            fetchNui('notify', 'Settings copied');
+            fetchNui('notify', 'Configurações copiadas');
           }}
         >
-          Copy settings
+          Copiar configurações
         </Menu.Item>
         <Menu.Item
           icon={<GiTeleport size={18} />}
@@ -52,23 +52,23 @@ const ActionsMenu: React.FC<{ data: CellContext<DoorColumn, unknown> }> = ({ dat
             fetchNui('teleportToDoor', data.row.getValue('id'));
           }}
         >
-          Teleport to door
+          Teleportar aqui
         </Menu.Item>
         <Menu.Item
           color="red"
           icon={<TbTrash size={18} />}
           onClick={() =>
             openConfirmModal({
-              title: 'Confirm deletion',
+              title: 'Confirmar exclusão',
               centered: true,
               withCloseButton: false,
               children: (
                 <Text>
-                  Are you sure you want to delete
+                  Você tem certeza que deseja excluir esta porta:
                   <Text component="span" weight={700}>{` ${data.row.getValue('name')}`}</Text>?
                 </Text>
               ),
-              labels: { confirm: 'Confirm', cancel: 'Cancel' },
+              labels: { confirm: 'Confirmar', cancel: 'Cancelar' },
               confirmProps: { color: 'red' },
               onConfirm: () => {
                 fetchNui('deleteDoor', data.row.getValue('id'));
@@ -76,7 +76,7 @@ const ActionsMenu: React.FC<{ data: CellContext<DoorColumn, unknown> }> = ({ dat
             })
           }
         >
-          Delete door
+          Deletar porta
         </Menu.Item>
       </Menu.Dropdown>
     </Menu>

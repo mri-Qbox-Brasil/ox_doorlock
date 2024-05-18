@@ -27,25 +27,25 @@ const Settings: React.FC = () => {
         >
           <Tabs.List>
             <Tabs.Tab value={'back'} onClick={() => navigate('/')} icon={<TbArrowBackUp size={20} />}>
-              Doors
+              Portas
             </Tabs.Tab>
             <Tabs.Tab value="general" icon={<TbSettings size={20} />}>
-              General
+              Geral
             </Tabs.Tab>
             <Tabs.Tab value="characters" icon={<TbUser size={20} />}>
-              Characters
+              Personagens
             </Tabs.Tab>
             <Tabs.Tab value="groups" icon={<TbBriefcase size={20} />}>
-              Groups
+              Grupos
             </Tabs.Tab>
             <Tabs.Tab value="items" icon={<TbBottle size={20} />}>
-              Items
+              Itens
             </Tabs.Tab>
             <Tabs.Tab value="lockpick" disabled={!lockpick} icon={<TbLock size={20} />}>
               Lockpick
             </Tabs.Tab>
             <Tabs.Tab value="sound" icon={<TbBell size={20} />}>
-              Sound
+              Som
             </Tabs.Tab>
           </Tabs.List>
         </Tabs>

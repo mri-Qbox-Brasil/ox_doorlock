@@ -17,38 +17,38 @@ const Switches: React.FC = () => {
     <>
       <SimpleGrid cols={2} pt={16}>
         <TooltipSwitch
-          label="Locked"
-          infoCircle="Sets whether the targeting door is locked by default"
+          label="Porta Trancada"
+          infoCircle="Define se a porta alvo está trancada por padrão"
           value={locked || false}
           toggle={() => toggleCheckbox('state')}
         />
         <TooltipSwitch
-          label="Double"
-          infoCircle="Enable if the targeting door is a double door"
+          label="Porta Dupla"
+          infoCircle="Habilitar se a porta alvo for uma porta dupla"
           value={double || false}
           toggle={() => toggleCheckbox('doors')}
         />
         <TooltipSwitch
-          label="Automatic"
-          infoCircle="Enable if the targeting door is moving automatically (Garage, poles, etc...)"
+          label="Porta Automática"
+          infoCircle="Habilite se a porta alvo se move automaticamente (Garagens, Portões, etc...)"
           value={automatic || false}
           toggle={() => toggleCheckbox('auto')}
         />
         <TooltipSwitch
-          label="Lockpick"
-          infoCircle="Enables the targeting door to be lockpicked. Can define skill check difficulties in Lockpick tab, otherwise uses config defaults"
+          label="Permitir Lockpick"
+          infoCircle="Ativar para permitir o uso de lockpick nesta porta. Você pode definir as dificuldades da verificação de habilidade na guia Lockpick, caso contrário, serão usados os padrões de configuração"
           value={lockpick || false}
           toggle={() => toggleCheckbox('lockpick')}
         />
         <TooltipSwitch
-          label="Hide UI"
-          infoCircle="Hides UI indicators for the targeting door"
+          label="Esconder UI"
+          infoCircle="Esconde os indicadores UI para a porta alvo"
           value={hideUi || false}
           toggle={() => toggleCheckbox('hideUi')}
         />
         <TooltipSwitch
-          label="Hold Open"
-          infoCircle="Sets whether the targeting door(s) should stay open while unlocked"
+          label="Manter Aberta"
+          infoCircle="Define se a porta alvo deve permanecer aberta enquanto destrancada"
           value={holdOpen || false}
           toggle={() => toggleCheckbox('holdOpen')}
         />
