@@ -5,6 +5,9 @@ Successor to nui_doorlock with less scuff and more stuff.
 
 _The UI needs to be built - use the [latest release](https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip) if you want to drag-n-drop._
 
+Refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines and to see our Contributor License Agreement.\
+Refer to [NOTICE.md](./NOTICE.md) for additional information and legal notices.
+
 ## Dependencies
 
 ### [oxmysql](https://github.com/overextended/oxmysql)
@@ -123,7 +126,7 @@ end)
 ### Lockpick
 
 - Difficulty
-  - Sets the skillcheck difficulty (see [docs](https://overextended.github.io/docs/ox_lib/Interface/Client/skillcheck)).
+  - Sets the skillcheck difficulty (see [docs](https://coxdocs.dev/ox_lib/Modules/Interface/Client/skillcheck)).
 - Area size
   - Custom difficulty area size.
 - Speed multiplier
